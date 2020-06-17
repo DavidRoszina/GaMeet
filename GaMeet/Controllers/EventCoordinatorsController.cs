@@ -34,7 +34,7 @@ namespace GaMeet.Controllers
             }
             else
             {
-                return View("Details", eventCoordinator);
+                return View("Index", eventCoordinator);
             }
         }
 
