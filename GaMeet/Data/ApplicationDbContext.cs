@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using GaMeet.Models;
 
 namespace GaMeet.Data
 {
@@ -13,6 +14,8 @@ namespace GaMeet.Data
             : base(options)
         {
         }
+        public DbSet<Gamer> Gamers { get; set; }
+        public DbSet<EventCoordinator> EventCoordinators { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
